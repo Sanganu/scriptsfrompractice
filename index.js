@@ -27,7 +27,7 @@ class Calculator {
     }
 
     subNumbers(){
-        return `The Subtraction of ${this.number1} and ${this.number2} is ${this.number1-this.number2}`
+        return `The Subtraction of ${this.number1} and ${this.number2} is ${Math.abs(this.number1-this.number2)}`
     }
     multiplyNumbers(){
         return `The Multiplication of ${this.number1} and ${this.number2} is ${this.number1*this.number2}`
@@ -45,3 +45,13 @@ var firstOperation = new Calculator(120,130)
 console.log(firstOperation.addNumbers());
 console.log(firstOperation.subNumbers());
 console.log(firstOperation.multiplyNumbers())
+// Change Values
+firstOperation.setterNumber1(220);
+firstOperation.setterNumber2(121);
+console.log(firstOperation.getterNumber1());
+console.log(firstOperation.getterNumber2());
+//Getting Updates Values
+console.log(firstOperation.addNumbers());
+console.log(firstOperation.subNumbers());
+console.log(firstOperation.multiplyNumbers())
+
