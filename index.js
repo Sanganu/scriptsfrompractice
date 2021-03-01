@@ -1,11 +1,11 @@
 // ES6 Class Syntax
-
+// JS is protype based language
 class Calculator {
      constructor(number1,number2){
          this.number1 = number1
          this.number2 = number2
      }
-     //Methods to manipulate the properties
+ 
      //Getters
      get Number1(){
          return `The first numbers is ${this.number1}`
@@ -22,7 +22,7 @@ class Calculator {
      set Number2(newValue){
         this.number2 = newValue
     }
-
+    //Methods to manipulate the properties
     addNumbers(){
         return `The Addition of ${this.number1} and ${this.number2} is ${this.number1+this.number2}`
     }
@@ -56,8 +56,4 @@ console.log(firstOperation.subNumbers());
 console.log(firstOperation.multiplyNumbers())
 
 
-class Series extends Calculator{
-    constructor(){
 
-    }
-}
