@@ -1,22 +1,44 @@
 // OOPS concept of Inheritance
 
 
-class Base{
-    constructor(){
+class Base {
+    constructor() {
         this.sum = 0
-        this.product = 0
+        this.product = 1
     }
-    get sum(){
+    get Addon() {
         return this.sum
     }
-    get product(){
+    get Product() {
         return this.product
     }
-    calculateAdd(number1,number2){
-        this.sum = number1 + number2
+    setSummation(number1) {
+        this.sum = this.sum + number1
     }
-    calculateProduct(number1, number2){
-        this.product = number1 * number2
+    set Multiplication(number1) {
+        this.product = this.product * number1
     }
 }
 
+class Series extends Base {
+    constructor(array) {
+        super()
+        this.numberSequence = array
+    }
+    sumSeries() {
+        for (let i = 0; i < this.numberSequence.length; i++) {
+            this.setSummation(this.numberSequence[i])
+        }
+    }
+    get Series() {
+        return this.numberSequence
+    }
+   
+}
+
+let myNumbers = [12, 39, 54, 11, 90, 32]
+let Problem = new Series(myNumbers)
+console.log(Problem.Series)
+console.log(Problem.Product)
+Problem.sumSeries()
+console.log(Problem.Addon)
