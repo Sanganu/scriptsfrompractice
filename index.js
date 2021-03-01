@@ -1,24 +1,25 @@
 // ES6 Class Syntax
+
 class Calculator {
      constructor(number1,number2){
          this.number1 = number1
          this.number2 = number2
      }
      //Methods to manipulate the properties
-
-     getterNumber1(){
+     //Getters
+     get Number1(){
          return `The first numbers is ${this.number1}`
      }
   
-     getterNumber2(){
+     get Number2(){
          return `The second number is ${this.number2}`
      }
-
-     setterNumber1(newValue){
+     //Setters
+     set Number1(newValue){
          this.number1 = newValue
      }
 
-     setterNumber2(newValue){
+     set Number2(newValue){
         this.number2 = newValue
     }
 
@@ -33,7 +34,6 @@ class Calculator {
         return `The Multiplication of ${this.number1} and ${this.number2} is ${this.number1*this.number2}`
     }
 
-
 }
 
 
@@ -45,13 +45,19 @@ var firstOperation = new Calculator(120,130)
 console.log(firstOperation.addNumbers());
 console.log(firstOperation.subNumbers());
 console.log(firstOperation.multiplyNumbers())
-// Change Values
-firstOperation.setterNumber1(220);
-firstOperation.setterNumber2(121);
-console.log(firstOperation.getterNumber1());
-console.log(firstOperation.getterNumber2());
+// Using Setters and Getters
+firstOperation.Number1 = 220;
+firstOperation.Number2 = 421;
+console.log(firstOperation.Number1);
+console.log(firstOperation.Number2);
 //Getting Updates Values
 console.log(firstOperation.addNumbers());
 console.log(firstOperation.subNumbers());
 console.log(firstOperation.multiplyNumbers())
 
+
+class Series extends Calculator{
+    constructor(){
+
+    }
+}
