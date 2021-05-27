@@ -3,7 +3,8 @@
 ##### index.js
 Basic Class setup
 
-
+##### app.js
+Inheritane
 
 
 ### Coded by:

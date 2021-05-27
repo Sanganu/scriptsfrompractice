@@ -60,3 +60,20 @@ console.log(`The Product of the Series: ${Problem.mulitply}`) //Parent Class Get
 
 console.log(`The summation of the Series: ${Problem.addon}`) // Parent Class Getter
 console.log(`Average : ${Problem.displayAverage}`)
+
+
+class Factorial extends Series{
+    constructor(factorialOf){
+        let factorialSequence = []
+        for(let i=factorialOf;i>=1;i--){
+            factorialSequence.push(i)
+        }
+        super(factorialSequence)
+    }
+    getFactorial(){
+        this.setProductsOf()
+        return this.product
+    }
+}
+
+let myFactorial = new Factorial(7) // Create instance of the Class Factorial - new keyword is used
